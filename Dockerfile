@@ -55,11 +55,9 @@ RUN set -x \
     && rm -f gl-v0.8.8-linux-x86_64.tar.gz
 
 COPY docker_deps/entrypoint.sh /root/
-COPY tests/test_libraries.py /tmp/
 COPY configs/jupyter_notebook_config.py /root/.jupyter/
 
-RUN chmod +x /root/entrypoint.sh && \
-    chown -R 777 /tmp/test_libraries.py
+RUN chmod +x /root/entrypoint.sh
 
 ENV LC_ALL=C.UTF-8 LANG=C.UTF-8
 ENV PYTHONPATH='/mnt/home/research/:/mnt/home/:$PYTHONPATH'
