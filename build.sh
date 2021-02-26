@@ -1,1 +1,1 @@
-docker build -f Dockerfile -t jupyter-data-science .
+docker build -f Dockerfile -t jupyter-dl .

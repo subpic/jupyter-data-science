@@ -15,5 +15,6 @@
 # ==============================================================================
 
 conda init bash
-nohup /opt/conda/envs/jupyter_env/bin/tensorboard --logdir=/mnt/home/research/data/logs&
+nohup /opt/conda/envs/jupyter_env/bin/tensorboard --logdir=/mnt/home/logs&
+nohup /usr/sbin/sshd -D&
 /opt/conda/envs/jupyter_env/bin/jupyter-lab "$@" --allow-root
